@@ -2,11 +2,13 @@ package com.epicodus.myjournal.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.epicodus.myjournal.R;
 import com.squareup.picasso.Picasso;
@@ -20,13 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.newEntryButton)
     Button mNewEntryButton;
     @Bind(R.id.imageView) ImageView mImageView;
-    private Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Picasso.with(context).load(R.drawable.background).into(mImageView);
+//        Picasso.with(context).load(R.drawable.background).into(mImageView);
         ButterKnife.bind(this);
 
         mNewEntryButton.setOnClickListener(this);
