@@ -26,8 +26,17 @@
             android:name="ui.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".ui.LoginActivity" />
-        <activity android:name=".ui.NewEntryActivity" />
-        <activity android:name=".ui.ViewEntriesActivity"></activity>
+        <activity android:name=".ui.NewEntryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicodus.myjournal.ui.MainActivity" />
+        </activity>
+
+        <activity android:name=".ui.ViewEntriesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicodus.myjournal.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
